@@ -45,4 +45,21 @@ class Dealership
             'address' => @address
         }
     end
+
+    def average_price_of_car
+        avg = total_value / @inventory_count
+        avg.to_s.insert(2, ',')
+    end
+
+    def cars_sorted_by_price
+        sorted = @inventory.sort_by do |car|
+            car.total_cost
+        end
+
+    def inventory_hash
+        inv_hash = Hash.new(0)
+        
+    end
+
+    end
 end
